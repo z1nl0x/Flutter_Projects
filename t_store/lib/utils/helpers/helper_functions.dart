@@ -79,9 +79,13 @@ class THelperFunctions {
     return MediaQuery.of(Get.context!).size.height;
   }
 
+  static double screenHeightK(BuildContext context) => MediaQuery.of(context).size.height;
+
   static double screenWidth() {
     return MediaQuery.of(Get.context!).size.width;
   }
+
+  static double screenWidthK(BuildContext context) => MediaQuery.of(context).size.width;
 
   static String getFormattedDate(
     DateTime date, {

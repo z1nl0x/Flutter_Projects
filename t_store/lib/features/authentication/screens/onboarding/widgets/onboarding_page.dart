@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:t_store/utils/constants/sizes.dart';
+import 'package:t_store/utils/helpers/helper_functions.dart';
 
 class OnBoardingPage extends StatelessWidget {
   const OnBoardingPage({
@@ -14,8 +15,6 @@ class OnBoardingPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final screenWidth = MediaQuery.of(context).size.width;
-    final screenHeight = MediaQuery.of(context).size.height;
 
     return Padding(
       padding: const EdgeInsets.all(TSizes.defaultSpace),
@@ -23,8 +22,8 @@ class OnBoardingPage extends StatelessWidget {
         children: [
           Image.asset(
             image,
-            width: screenWidth * 0.7,
-            height: screenHeight * 0.5,
+            width: THelperFunctions.screenWidthK(context) * 0.7,
+            height: THelperFunctions.screenHeightK(context) * 0.5,
             gaplessPlayback: true,
           ),
           Text(
