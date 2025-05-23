@@ -12,16 +12,21 @@ class OnBoardingPage extends StatelessWidget {
 
   final String image, title, subTitle;
 
+
   @override
   Widget build(BuildContext context) {
+    final screenWidth = MediaQuery.of(context).size.width;
+    final screenHeight = MediaQuery.of(context).size.height;
+
     return Padding(
       padding: const EdgeInsets.all(TSizes.defaultSpace),
       child: Column(
         children: [
-          Image(
-            width: THelperFunctions.screenWidth() * 0.7,
-            height: THelperFunctions.screenHeight() * 0.5,
-            image: AssetImage(image),
+          Image.asset(
+            image,
+            width: screenWidth * 0.7,
+            height: screenHeight * 0.5,
+            gaplessPlayback: true,
           ),
           Text(
             title,
